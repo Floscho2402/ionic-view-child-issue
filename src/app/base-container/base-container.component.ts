@@ -5,7 +5,8 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 
 @Component({
   selector: 'app-base-container',
-  template: ''
+  template: '',
+  standalone: true
 })
 export class BaseContainerComponent implements ViewDidEnter {
   @ViewChild(IonContent) content!: IonContent;

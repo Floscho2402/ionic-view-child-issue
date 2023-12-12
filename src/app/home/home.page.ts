@@ -1,14 +1,17 @@
 import { Component, inject } from '@angular/core';
-import { RefresherCustomEvent } from '@ionic/angular';
-import { MessageComponent } from '../message/message.component';
+import { IonicModule, RefresherCustomEvent } from '@ionic/angular';
 
 import { DataService, Message } from '../services/data.service';
 import { BaseContainerComponent } from '../base-container/base-container.component';
+import { MessageComponentModule } from '../message/message.module';
+import { NgFor } from '@angular/common';
 
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
+  standalone: true,
+  imports: [IonicModule, MessageComponentModule, NgFor]
 })
 export class HomePage extends BaseContainerComponent {
   private data = inject(DataService);
