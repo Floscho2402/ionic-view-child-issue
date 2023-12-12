@@ -1,0 +1,7 @@
+{
+  "name": "ionic-view-child-issue",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
