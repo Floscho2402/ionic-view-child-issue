@@ -3,15 +3,15 @@ import { RefresherCustomEvent } from '@ionic/angular';
 import { MessageComponent } from '../message/message.component';
 
 import { DataService, Message } from '../services/data.service';
+import { BaseContainerComponent } from '../base-container/base-container.component';
 
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
-export class HomePage {
+export class HomePage extends BaseContainerComponent {
   private data = inject(DataService);
-  constructor() {}
 
   refresh(ev: any) {
     setTimeout(() => {
