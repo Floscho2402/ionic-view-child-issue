@@ -9,7 +9,7 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
   standalone: true
 })
 export class BaseContainerComponent implements ViewDidEnter {
-  @ViewChild(IonContent) content!: IonContent;
+  @ViewChild('content') content!: IonContent;
 
   protected readonly destroyRef: DestroyRef = inject(DestroyRef);
 
