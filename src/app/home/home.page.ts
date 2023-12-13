@@ -1,5 +1,13 @@
 import { Component, inject } from '@angular/core';
-import { IonicModule, RefresherCustomEvent } from '@ionic/angular';
+import { RefresherCustomEvent } from '@ionic/angular';
+import {
+  IonContent,
+  IonHeader, IonList,
+  IonRefresher,
+  IonRefresherContent,
+  IonTitle,
+  IonToolbar
+} from '@ionic/angular/standalone';
 
 import { DataService, Message } from '../services/data.service';
 import { BaseContainerComponent } from '../base-container/base-container.component';
@@ -11,7 +19,7 @@ import { MessageComponent } from '../message/message.component';
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
   standalone: true,
-  imports: [IonicModule, MessageComponent, NgFor]
+  imports: [MessageComponent, NgFor, IonContent, IonHeader, IonToolbar, IonTitle, IonRefresher, IonRefresherContent, IonList]
 })
 export class HomePage extends BaseContainerComponent {
   private data = inject(DataService);
